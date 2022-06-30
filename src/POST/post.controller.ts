@@ -1,16 +1,5 @@
-/*
-https://docs.nestjs.com/controllers#controllers
-*/
+import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 
-import {
-  Body,
-  Controller,
-  Delete,
-  Get,
-  Param,
-  Post,
-  Put,
-} from '@nestjs/common';
 import { POST } from './data/post.dto';
 import { PostService } from './post.service';
 
