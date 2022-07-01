@@ -1,15 +1,9 @@
-import { PostController } from './post.controller';
+import { Module } from '@nestjs/common';
 import { PostService } from './post.service';
-import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
-import { PostMiddleware } from './post.middleware';
+import { PostController } from './post.controller';
 
 @Module({
-  imports: [],
   controllers: [PostController],
-  providers: [PostService],
+  providers: [PostService]
 })
-export class PostModule implements NestModule {
-  configure(consumer: MiddlewareConsumer) {
-    consumer.apply(PostMiddleware).forRoutes('post'); // here You select any path whew you want to use this class based middleware
-  }
-}
+export class PostModule {}

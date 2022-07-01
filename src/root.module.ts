@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
-import { PostModule } from './POST/post.module';
-import { BookModule } from './book/book.module';
+import { PostModule } from './post/post.module';
+
 
 
 @Module({
-  imports: [PostModule, BookModule],
+  imports: [PostModule],
   controllers: [],
   providers: [],
 })
